@@ -13,5 +13,5 @@ Route::post('login',[LoginController::class,'login']);
 Route::get('categorias', [CategoriaController::class, 'index']); // Listar todas las categorías
 Route::post('categorias/save', [CategoriaController::class, 'store']); // Guardar nueva categoría
 Route::get('categorias/{id}', [CategoriaController::class, 'show']); // Mostrar una categoría específica
-Route::put('categorias/{id}/update', [CategoriaController::class, 'update']); // Actualizar una categoría
+Route::post('categorias/{id}/update', [CategoriaController::class, 'update']); // Actualizar una categoría
 Route::delete('categorias/{id}/delete', [CategoriaController::class, 'destroy']); // Eliminar una categoría
