@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class CategoriaController extends Controller
 {
     public function index() {
-        return Categoria::all();
+        return Categoria::with('subcategorias')->get();
     }
-
+    
     public function store(Request $request) {
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
